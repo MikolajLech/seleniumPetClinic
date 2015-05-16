@@ -1,2 +1,4 @@
-# selenium-testing
-Testing web app with selenium
+ui-testing
+==========
+
+Example of advanced UI Testing patterns
