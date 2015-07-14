@@ -1,7 +1,6 @@
 package ldrygala.petclinic.pages;
 
 import ldrygala.petclinic.AbstractPageObject;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,7 +12,7 @@ public class HomePage extends AbstractPageObject{
 
 	public HomePage(WebDriver driver) {
 		super(driver);
-		this.driver.get("http://demo-spring-petclinic.cfapps.io/");
+		this.driver.get("http://petclinic.cloudapp.net/");
 	}
 	
 	public FindOwnersPage clickFindOwner() {

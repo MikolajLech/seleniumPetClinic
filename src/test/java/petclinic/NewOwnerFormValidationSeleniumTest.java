@@ -6,10 +6,11 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 
-import ldrygala.petclinic.AbstractSelenium;
+import ldrygala.petclinic.AbstractSeleniumChrome;
+import ldrygala.petclinic.AbstractSeleniumFirefox;
 import ldrygala.petclinic.pages.NewOwnerPage;
 
-public class NewOwnerFormValidationSeleniumTest extends AbstractSelenium {
+public class NewOwnerFormValidationSeleniumTest extends AbstractSeleniumFirefox {
 
 	private NewOwnerPage newOwnerPage;
 

@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 @RunWith(SeleniumScreenshotJUnit4Runner.class)
-public class AbstractSelenium {
+public class AbstractSeleniumFirefox {
 	private WebDriver driver;
 
 	@Before

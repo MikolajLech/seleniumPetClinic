@@ -18,6 +18,5 @@ public class AbstractPageObject {
 		} catch (NoSuchElementException e) {
 			return false;
 		}
-		
 	}
 }

@@ -1,6 +1,6 @@
 package petclinic;
 
-import ldrygala.petclinic.AbstractSelenium;
+import ldrygala.petclinic.AbstractSeleniumFirefox;
 import ldrygala.petclinic.enums.PetType;
 import ldrygala.petclinic.pages.NewPetPage;
 import org.junit.Before;
@@ -9,7 +9,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class NewPetFormValidationSeleniumTest extends AbstractSelenium {
+public class NewPetFormValidationSeleniumTest extends AbstractSeleniumFirefox {
 
 	private NewPetPage newPetPage;
 
