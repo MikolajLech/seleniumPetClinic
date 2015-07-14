@@ -1,6 +1,7 @@
-package ldrygala.petclinic.pages;
+package mlech.petclinic.pages;
 
-import ldrygala.petclinic.AbstractPageObject;
+import mlech.petclinic.AbstractPageObject;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

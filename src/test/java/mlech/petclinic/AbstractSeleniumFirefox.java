@@ -1,6 +1,7 @@
-package ldrygala.petclinic;
+package mlech.petclinic;
 
-import ldrygala.petclinic.pages.HomePage;
+import mlech.petclinic.pages.HomePage;
+
 import org.apache.commons.io.FileUtils;
 import org.junit.After;
 import org.junit.Before;

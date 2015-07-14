@@ -1,4 +1,4 @@
-package ldrygala.petclinic.enums;
+package mlech.petclinic.enums;
 
 public enum PetType {
 	BIRD("bird"),

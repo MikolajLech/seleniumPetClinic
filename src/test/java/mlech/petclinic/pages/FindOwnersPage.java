@@ -1,6 +1,6 @@
-package ldrygala.petclinic.pages;
+package mlech.petclinic.pages;
 
-import ldrygala.petclinic.AbstractPageObject;
+import mlech.petclinic.AbstractPageObject;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -24,13 +24,14 @@ public class FindOwnersPage extends AbstractPageObject {
 		return PageFactory.initElements(driver, NewOwnerPage.class);
 	}
 	
-	public NewOwnerPage clickFindOwnersButton() {
+	public ShowOwnersPage clickFindOwnersButton() {
 		findOwnerButton.click();
-		return PageFactory.initElements(driver, NewOwnerPage.class);
+		return PageFactory.initElements(driver, ShowOwnersPage.class);
 	}
 
 	public FindOwnersPage setLastName(String lastName) {
 		this.lastName.sendKeys(lastName);
 		return this;
 	}
+
 }

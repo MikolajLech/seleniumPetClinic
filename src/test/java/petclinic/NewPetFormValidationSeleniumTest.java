@@ -1,15 +1,15 @@
 package petclinic;
 
-import ldrygala.petclinic.AbstractSeleniumFirefox;
-import ldrygala.petclinic.enums.PetType;
-import ldrygala.petclinic.pages.NewPetPage;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+import mlech.petclinic.AbstractSeleniumChrome;
+import mlech.petclinic.enums.PetType;
+import mlech.petclinic.pages.NewPetPage;
+
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-
-public class NewPetFormValidationSeleniumTest extends AbstractSeleniumFirefox {
+public class NewPetFormValidationSeleniumTest extends AbstractSeleniumChrome {
 
 	private NewPetPage newPetPage;
 
@@ -17,9 +17,8 @@ public class NewPetFormValidationSeleniumTest extends AbstractSeleniumFirefox {
 	@Before
 	public void setUp() {
 		super.setUp();
-		newPetPage = openPetClinic().clickFindOwner().clickAddOwner().setFirstName("firstName").setLastName("lastName")
-				.setAddress("address").setCity("city").setTelephone("123123")
-				.clickAddOwnerButton().clickAddNewPet();
+		newPetPage = openPetClinic().clickFindOwner().setLastName("Davis").clickFindOwnersButton().
+				clickDaniDavis().clickAddNewPet();
 	}
 	
 	@Test
@@ -36,8 +35,10 @@ public class NewPetFormValidationSeleniumTest extends AbstractSeleniumFirefox {
 		assertTrue(newPetPage.hasError());
 	}
 
-	@Test
+	@Test(expected=IllegalArgumentException.class)
 	public void shouldFail() {
+//		newPetPage.setType(PetType.SNAKE);
+
 		assertEquals(PetType.SNAKE, newPetPage.getPetType());
 	}
 

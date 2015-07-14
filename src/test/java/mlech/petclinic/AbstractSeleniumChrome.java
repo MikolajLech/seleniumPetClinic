@@ -1,6 +1,7 @@
-package ldrygala.petclinic;
+package mlech.petclinic;
 
-import ldrygala.petclinic.pages.HomePage;
+import mlech.petclinic.pages.HomePage;
+
 import org.apache.commons.io.FileUtils;
 import org.junit.After;
 import org.junit.Before;
@@ -22,9 +23,9 @@ public class AbstractSeleniumChrome {
 
 	@Before
 	public void setUp() {
-		System.setProperty("webdriver.chrome.driver", "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Program Files (x86)/Google/Chrome/Application/chromedriver.exe");
 		ChromeOptions profile = new ChromeOptions();
-		profile.addArguments("--lang=en");
+//		profile.addArguments("--lang=en");
 		driver = new ChromeDriver(profile);
 		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 	}

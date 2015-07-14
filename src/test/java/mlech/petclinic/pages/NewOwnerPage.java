@@ -1,6 +1,7 @@
-package ldrygala.petclinic.pages;
+package mlech.petclinic.pages;
 
-import ldrygala.petclinic.AbstractPageObject;
+import mlech.petclinic.AbstractPageObject;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -44,9 +45,9 @@ public class NewOwnerPage extends AbstractPageObject {
 		super(driver);
 	}
 	
-	public OwnerInfomrationPage clickAddOwnerButton() {
+	public OwnerInformationPage clickAddOwnerButton() {
 		addOwnerButton.click();
-		return PageFactory.initElements(driver, OwnerInfomrationPage.class);
+		return PageFactory.initElements(driver, OwnerInformationPage.class);
 	}
 
 }

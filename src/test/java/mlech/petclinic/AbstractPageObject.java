@@ -1,4 +1,4 @@
-package ldrygala.petclinic;
+package mlech.petclinic;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
@@ -14,6 +14,15 @@ public class AbstractPageObject {
 	public boolean hasError() {
 		try {
 			driver.findElement(By.className("help-inline"));
+			return true;
+		} catch (NoSuchElementException e) {
+			return false;
+		}
+	}
+	
+	public boolean hasAttributeError() {
+		try {
+			driver.findElement(By.partialLinkText("Expected session attribute"));
 			return true;
 		} catch (NoSuchElementException e) {
 			return false;
