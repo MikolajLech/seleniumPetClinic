@@ -8,7 +8,7 @@ import org.junit.runners.model.Statement;
 
 public class SeleniumScreenshotJUnit4Runner extends BlockJUnit4ClassRunner {
 
-	public SeleniumScreenshotJUnit4Runner(Class<AbstractSeleniumChrome> clazz)
+	public SeleniumScreenshotJUnit4Runner(Class<AbstractSelenium> clazz)
 			throws InitializationError {
 		super(clazz);
 	}
@@ -21,7 +21,7 @@ public class SeleniumScreenshotJUnit4Runner extends BlockJUnit4ClassRunner {
 				try {
 					super.evaluate();
 				} catch (Throwable throwable) {
-                    ((AbstractSeleniumChrome)test).takeScreenshot();
+                    ((AbstractSelenium)test).takeScreenshot();
                     throw throwable;
 				}
 			}

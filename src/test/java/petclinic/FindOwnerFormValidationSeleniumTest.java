@@ -1,15 +1,14 @@
 package petclinic;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-import mlech.petclinic.AbstractSeleniumChrome;
-import mlech.petclinic.AbstractSeleniumFirefox;
+import mlech.petclinic.AbstractSelenium;
 import mlech.petclinic.pages.FindOwnersPage;
 
 import org.junit.Before;
 import org.junit.Test;
 
 
-public class FindOwnerFormValidationSeleniumTest extends AbstractSeleniumChrome {
+public class FindOwnerFormValidationSeleniumTest extends AbstractSelenium {
 
 	private FindOwnersPage findOwnersPage;
 

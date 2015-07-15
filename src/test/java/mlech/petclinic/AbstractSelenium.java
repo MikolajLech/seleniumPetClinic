@@ -1,5 +1,9 @@
 package mlech.petclinic;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
 import mlech.petclinic.pages.HomePage;
 
 import org.apache.commons.io.FileUtils;
@@ -11,24 +15,34 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.support.PageFactory;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.concurrent.TimeUnit;
-
 @RunWith(SeleniumScreenshotJUnit4Runner.class)
-public class AbstractSeleniumChrome {
+public class AbstractSelenium {
+	
+	@Component("driver")
 	private WebDriver driver;
 
 	@Before
 	public void setUp() {
-		System.setProperty("webdriver.chrome.driver", "C:\\Program Files (x86)/Google/Chrome/Application/chromedriver.exe");
-		ChromeOptions profile = new ChromeOptions();
-//		profile.addArguments("--lang=en");
-		driver = new ChromeDriver(profile);
-		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		
 	}
+//	public void CHsetUp() {
+//		System.setProperty("webdriver.chrome.driver", "C:\\Program Files (x86)/Google/Chrome/Application/chromedriver.exe");
+//		ChromeOptions profile = new ChromeOptions();
+////		profile.addArguments("--lang=en");
+//		driver = new ChromeDriver(profile);
+//		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+//	}
+//	
+//	public void FFsetUp() {
+//		FirefoxProfile profile = new FirefoxProfile();
+//		profile.setPreference("init.accept_languages", "en");
+//		driver = new FirefoxDriver(profile);
+//		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+//	}
 	
 	public HomePage openPetClinic() {
 		return PageFactory.initElements(driver, HomePage.class);

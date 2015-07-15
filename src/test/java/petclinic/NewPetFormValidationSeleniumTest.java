@@ -2,14 +2,14 @@ package petclinic;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import mlech.petclinic.AbstractSeleniumChrome;
+import mlech.petclinic.AbstractSelenium;
 import mlech.petclinic.enums.PetType;
 import mlech.petclinic.pages.NewPetPage;
 
 import org.junit.Before;
 import org.junit.Test;
 
-public class NewPetFormValidationSeleniumTest extends AbstractSeleniumChrome {
+public class NewPetFormValidationSeleniumTest extends AbstractSelenium {
 
 	private NewPetPage newPetPage;
 

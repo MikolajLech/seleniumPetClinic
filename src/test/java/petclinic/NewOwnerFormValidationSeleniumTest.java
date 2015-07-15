@@ -2,15 +2,13 @@ package petclinic;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
+import mlech.petclinic.AbstractSelenium;
+import mlech.petclinic.pages.NewOwnerPage;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import mlech.petclinic.AbstractSeleniumChrome;
-import mlech.petclinic.AbstractSeleniumFirefox;
-import mlech.petclinic.pages.NewOwnerPage;
-
-public class NewOwnerFormValidationSeleniumTest extends AbstractSeleniumChrome {
+public class NewOwnerFormValidationSeleniumTest extends AbstractSelenium {
 
 	private NewOwnerPage newOwnerPage;
 

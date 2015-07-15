@@ -19,13 +19,4 @@ public class AbstractPageObject {
 			return false;
 		}
 	}
-	
-	public boolean hasAttributeError() {
-		try {
-			driver.findElement(By.partialLinkText("Expected session attribute"));
-			return true;
-		} catch (NoSuchElementException e) {
-			return false;
-		}
-	}
 }
