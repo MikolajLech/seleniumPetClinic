@@ -12,10 +12,10 @@ public class FindOwnerFormValidationSeleniumTest extends AbstractSelenium {
 
 	private FindOwnersPage findOwnersPage;
 
-	@Override
 	@Before
 	public void setUp() {
-		super.setUp();
+		System.out.println(System.getProperty("browser"));
+		super.setUp(System.getProperty("browser"));
 		findOwnersPage = openPetClinic().clickFindOwner();
 	}
 

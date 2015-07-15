@@ -13,10 +13,9 @@ public class NewPetFormValidationSeleniumTest extends AbstractSelenium {
 
 	private NewPetPage newPetPage;
 
-	@Override
 	@Before
 	public void setUp() {
-		super.setUp();
+		super.setUp(System.getProperty("browser"));
 		newPetPage = openPetClinic().clickFindOwner().setLastName("Davis").clickFindOwnersButton().
 				clickDaniDavis().clickAddNewPet();
 	}

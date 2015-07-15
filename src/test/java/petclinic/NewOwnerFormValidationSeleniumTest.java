@@ -12,10 +12,9 @@ public class NewOwnerFormValidationSeleniumTest extends AbstractSelenium {
 
 	private NewOwnerPage newOwnerPage;
 
-	@Override
 	@Before
 	public void setUp() {
-		super.setUp();
+		super.setUp(System.getProperty("browser"));
 		newOwnerPage = openPetClinic().clickFindOwner().clickAddOwner();
 	}
 

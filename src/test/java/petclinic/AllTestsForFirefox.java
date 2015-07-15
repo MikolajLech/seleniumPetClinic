@@ -1,5 +1,6 @@
 package petclinic;
 
+import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
@@ -8,6 +9,11 @@ import org.junit.runners.Suite.SuiteClasses;
 @SuiteClasses({ FindOwnerFormValidationSeleniumTest.class,
 		NewOwnerFormValidationSeleniumTest.class,
 		NewPetFormValidationSeleniumTest.class })
-public class AllTests {
+public class AllTestsForFirefox {
+	
+	@BeforeClass
+	public static void setupProperties() {
+		System.setProperty("browser","Firefox");		
+	}
 
 }

@@ -5,6 +5,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 
 public class AbstractPageObject {
+	
 	protected WebDriver driver;
 	
 	public AbstractPageObject(WebDriver driver) {
